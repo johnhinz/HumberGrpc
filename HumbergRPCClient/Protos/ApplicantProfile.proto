@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "HumberGrpc";
+
+package ApplicantProfile;
+
+service Applicant {
+	rpc GetApplicantProfile(Id) returns (ApplicantProfile);
+}
+
+message Id {
+	string Id = 1;
+}
+
+message ApplicantProfile {
+  string Id = 1;
+  string Login = 2;
+  double Salary = 3;
+  double Rate = 4;
+  string Currency = 5;
+  string Country = 6;
+  string Province = 7;
+}
